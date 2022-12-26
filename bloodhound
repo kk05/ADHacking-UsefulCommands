@@ -1,4 +1,4 @@
 $ sudo apt install bloodhound
-> get ingestor ->sharphound.exe
+> get ingestor ->sharphound.exe or sharpcollection https://github.com/Flangvik/SharpCollection
 $ sudo neo4j console
 $ sudo bloodhound
