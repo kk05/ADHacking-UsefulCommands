@@ -1,0 +1,4 @@
+$ sudo apt install bloodhound
+> get ingestor ->sharphound.exe
+$ sudo neo4j console
+$ sudo bloodhound
