@@ -5,6 +5,11 @@ Impacket : https://github.com/SecureAuthCorp/impacket
 2.cp imapcket /opt
 3.python3 -m pip install .
 
+Using imapcket to connect mssql using creds obtained
+------------------------------------------------------------
+
+proxychains impacket-mssqlclient user:pass@IP -windows-auth
+-------------------------------------------------------------
 
 LMNR Poisoning
 --------------------------------------------------------
